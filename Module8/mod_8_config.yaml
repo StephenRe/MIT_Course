@@ -1,0 +1,6 @@
+---
+mod_8_config:
+  host: 'localhost'
+  user: 'root'
+  password: '7890oiuy&*()OIUY'
+  db: 'module_8_project'

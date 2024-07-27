@@ -1,0 +1,11 @@
+---
+ed_config:
+  host: 'localhost'
+  user: 'root'
+  password: '7890oiuy&*()OIUY'
+  db: 'education'
+sak_config:
+  host: 'localhost'
+  user: 'root'
+  password: '7890oiuy&*()OIUY'
+  db: 'sakila'
