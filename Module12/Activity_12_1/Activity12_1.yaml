@@ -1,0 +1,6 @@
+---
+Activity_12_1_config:
+  host: 'localhost'
+  user: 'root'
+  password: '7890oiuy&*()OIUY'
+  db: 'restaurants'

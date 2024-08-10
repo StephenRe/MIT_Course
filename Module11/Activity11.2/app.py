@@ -26,7 +26,7 @@ def displayCookieValue():
     
 @app.route("/removeCookie")
 def removeCookie():
-    res = make_response("Cookie removed!")
+    res = ("Cookie removed!")
     # add code to remove cookie here (set max_age = 0)
     res.set_cookie('myFirstCookie', '', max_age=0)
     return res
