@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  spark-master:
+    build: ./spark-master
+    container_name: spark-master
+    hostname: spark-master
+    networks:
+      - spark-network
+    ports:
+      - '7077:7077'
+      - '8080:8080'
+    volumes:
+      - ./data:/opt/spark/work-dir
+
+  spark-worker:
+    build: ./spark-worker
+    container_name: spark-worker
+    hostname: spark-worker
+    depends_on:
+      - spark-master
+    networks:
+      - spark-network
+    ports:
+      - '8081:8081'
+    environment:
+      - SPARK_MASTER=spark://spark-master:7077
+    volumes:
+      - ./data:/opt/spark/work-dir
+
+networks:
+  spark-network:
+    driver: bridge
